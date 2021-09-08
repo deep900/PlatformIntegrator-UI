@@ -1,0 +1,21 @@
+
+<table class="table">
+    <thead>
+      <tr>        
+        <th scope="col">Cell Name</th>
+        <th scope="col">Port</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cellInfo of cellInfoList">
+            <td>{{cellInfo.name}}</td>
+            <td>{{cellInfo.port}}</td>
+            <td>{{cellInfo.status}}</td>
+            <td><a href=#>Edit</a> / <a href=#>View</a></td>
+        </tr>
+    </tbody>
+  </table>
+  
+  

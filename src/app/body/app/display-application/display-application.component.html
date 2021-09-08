@@ -1,0 +1,21 @@
+
+<table class="table">
+    <thead>
+      <tr>        
+        <th scope="col">Name</th>
+        <th scope="col">URL</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appInfo of applicationInfoList">
+            <td>{{appInfo.name}}</td>
+            <td>{{appInfo.httpUrl}}</td>
+            <td>{{appInfo.status}}</td>
+            <td><a href=#>Edit</a> / <a href=#>View</a></td>
+        </tr>
+    </tbody>
+  </table>
+  
+  
