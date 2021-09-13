@@ -10,10 +10,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let cellInfo of cellInfoList">
-            <td>{{cellInfo.name}}</td>
+            <td>{{cellInfo.cellname}}</td>
             <td>{{cellInfo.port}}</td>
             <td>{{cellInfo.status}}</td>
-            <td><a href=#>Edit</a> / <a href=#>View</a></td>
+            <td><a href=#>Edit</a> / <a href=#>View</a> / <a href=# id={{cellInfo.cellname}} (click)='handleCellBuild($event)'>Build</a></td>
         </tr>
     </tbody>
   </table>

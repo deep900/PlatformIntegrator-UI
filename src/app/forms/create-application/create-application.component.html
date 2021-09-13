@@ -1,1 +1,29 @@
-<p>create-application works!</p>
+<h3>Create a new application</h3>
+<div class="mt-3 ml-3">
+  <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div class="form-group col-sm-4">
+      <label>Application Name</label>
+      <input type="text" class="form-control" formControlName="appname" id="appname"
+        placeholder="Name of the application (Min 3 Characters)">
+    </div>
+    <div class="form-group col-sm-4">
+      <label>Http URL</label>
+      <input type="text" class="form-control" formControlName="httpUrl" id="httpUrl" placeholder="Http URL">
+    </div>
+    <div class="form-group col-sm-4">
+      <label>Https URL</label>
+      <input type="text" class="form-control" formControlName="httspUrl" id="httpsUrl" placeholder="Https URL">
+    </div>
+    <div class="form-group col-sm-4">
+      <label>Authorization URL</label>
+      <input type="text" class="form-control" formControlName="authUrl" id="authUrl" placeholder="Auth URL">
+    </div>
+    <div class="form-group col-sm-4">
+      <label>Open API Definition File</label>
+      <input type="file" class="input-group-text text-info" formControlName="file" id="fileUpload"
+        (change)="handleFileInput($event)">
+    </div>
+    <input type="submit" class="btn-primary ml-3" value="Submit">
+    <button class="btn-danger ml-3">Cancel</button>
+  </form>
+</div>

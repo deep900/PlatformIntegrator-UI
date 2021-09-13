@@ -1,1 +1,21 @@
-<p>associate-app works!</p>
+<h3>Associate an application with cell</h3>
+<div class="mt-3 ml-3">
+    <form [formGroup]="associationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group col-sm-4">
+      <label >Cell Name</label>
+      <select class="form-control" formControlName="cellinfo" (ngModelChange)="onCellChange()">
+        <option *ngFor="let cell of cellInfoList" [ngValue]="cell">
+              {{ cell.cellname }}
+        </option>
+     </select>    
+     <label >Application Name</label>
+     <select class="form-control" formControlName="appinfo">
+       <option *ngFor="let app of applicationInfoList" [ngValue]="app">
+             {{ app.appname }}
+       </option>
+    </select>    
+    </div>    
+    <input type="submit" class="btn-primary ml-3" value="Submit">
+    <button class="btn-danger ml-3">Cancel</button>
+  </form>
+</div>

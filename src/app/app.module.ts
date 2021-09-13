@@ -13,6 +13,9 @@ import { AssociateAppComponent } from './forms/associate-app/associate-app.compo
 import { DisplayCellComponent } from './body/cell/display-cell/display-cell.component';
 import { DisplayApplicationComponent } from './body/app/display-application/display-application.component';
 import { SidemenuComponent } from './body/sidemenu/sidemenu/sidemenu.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { SidemenuComponent } from './body/sidemenu/sidemenu/sidemenu.component';
     AssociateAppComponent,
     DisplayCellComponent,
     DisplayApplicationComponent,
-    SidemenuComponent
+    SidemenuComponent    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
